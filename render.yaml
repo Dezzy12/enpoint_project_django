@@ -3,4 +3,4 @@ services:
     type: web
     env: python
     buildCommand: ./build.sh
-    startCommand: python manage.py runserver
+    startCommand: gunicorn endpoint_project.wsgi:application --bind 0.0.0.0:$PORT
