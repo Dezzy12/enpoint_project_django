@@ -1,0 +1,6 @@
+services:
+  - name: my-django-app
+    type: web
+    env: python
+    buildCommand: ./build.sh
+    startCommand: python manage.py runserver
